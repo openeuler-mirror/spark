@@ -8,7 +8,7 @@ URL: http://spark.apache.org/
 BuildArch: noarch
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
 
-BuildRequires: java-1.8.0-openjdk-devel
+BuildRequires: java-1.8.0-openjdk-devel, maven
 #BuildRequires: maven
 
 Requires: java-1.8.0-openjdk
