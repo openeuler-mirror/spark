@@ -8,6 +8,8 @@ License: Apache License v2.0
 URL: http://spark.apache.org/
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
 
+Patch0001: 0001-modify-maven-version-for-3.6.3-to-3.5.4.patch
+
 BuildRequires: java-1.8.0-openjdk-devel
 BuildRequires: maven
 
@@ -20,6 +22,8 @@ Apache Spark achieves high performance for both batch and streaming data, using 
 
 %prep
 %setup -q
+
+%patch0001 -p1
 
 %build
 mvn -DskipTests clean package
