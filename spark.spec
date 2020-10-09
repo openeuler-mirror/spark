@@ -1,4 +1,5 @@
 %global __os_install_post %(echo '%{__os_install_post}' | sed -e 's!/usr/lib[^[:space:]]*/brp-python-bytecompile[[:space:]].*$!!g')
+%global debug_package %{nil}
 
 Summary: A unified analytics engine for large-scale data processing.
 Name: spark
