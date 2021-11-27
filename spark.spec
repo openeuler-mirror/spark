@@ -28,7 +28,7 @@ Apache Spark achieves high performance for both batch and streaming data, using 
 %patch0001 -p1
 
 %build
-cp %{SOURCE} ./settings.xml
+cp %{SOURCE1} ./settings.xml
 mvn -DskipTests clean package -s settings.xml
 
 %install
