@@ -4,7 +4,7 @@
 Summary: A unified analytics engine for large-scale data processing.
 Name: spark
 Version: 3.0.1
-Release: 1.0
+Release: 2.0
 License: Apache License v2.0
 URL: http://spark.apache.org/
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
@@ -38,6 +38,9 @@ cp -rf ../%{name}-%{version} %{buildroot}/opt/apache-%{name}-%{version}
 
 
 %changelog
+* Fri Feb 25 2022 wangkai <wangkai385@huawei.com> - 3.0.1-2.0
+- Rebuild for fix log4j1.x cves
+
 * Fri Sep 18 2020 Hubble_Zhu<hubble_zhu@qq.com> - 1.0
 - Init package
 
