@@ -4,7 +4,7 @@
 Summary: A unified analytics engine for large-scale data processing.
 Name: spark
 Version: 3.2.0
-Release: 1
+Release: 2
 License: Apache License v2.0
 URL: http://spark.apache.org/
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
@@ -29,7 +29,7 @@ Apache Spark achieves high performance for both batch and streaming data, using 
 
 %build
 cp %{SOURCE1} ./settings.xml
-mvn -DskipTests clean package -s settings.xml
+mvn -DskipTests -Dmaven.test.skip=true clean package -s settings.xml
 
 %install
 mkdir -p %{buildroot}/opt/
@@ -40,6 +40,9 @@ cp -rf ../%{name}-%{version} %{buildroot}/opt/apache-%{name}-%{version}
 
 
 %changelog
+* Fri Mar 25 2022 xiexing <xiexing4@hisilicon.com> - 3.2.0-2
+- fix install problem
+
 * Tue Mar 15 2022 houyingchao <houyingchao@huawei.com> - 3.2.0-1
 - Upgrade to 3.2.0 version
 - Fix CVE-2021-38296
