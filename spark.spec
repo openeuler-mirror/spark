@@ -29,7 +29,7 @@ Apache Spark achieves high performance for both batch and streaming data, using 
 
 %build
 cp %{SOURCE1} ./settings.xml
-mvn -DskipTests-Dmaven.test.skip=true clean package -s settings.xml
+mvn -DskipTests -Dmaven.test.skip=true clean package -s settings.xml
 
 %install
 mkdir -p %{buildroot}/opt/
