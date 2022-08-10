@@ -8,7 +8,6 @@ Release: 1
 License: Apache 2.0
 URL: http://spark.apache.org/
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
-Source1: settings.xml
 
 Patch0001: 0001-change-mvn-scalafmt.patch
 
