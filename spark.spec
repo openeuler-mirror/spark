@@ -3,14 +3,14 @@
 
 Summary: A unified analytics engine for large-scale data processing.
 Name: spark
-Version: 3.2.0
-Release: 2
-License: Apache License v2.0
+Version: 3.2.2
+Release: 1
+License: Apache 2.0
 URL: http://spark.apache.org/
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
 Source1: settings.xml
 
-Patch0001: 0001-modify-maven-version-for-3.6.3-to-3.5.4.patch
+Patch0001: 0001-change-mvn-scalafmt.patch
 
 BuildRequires: java-1.8.0-openjdk-devel
 BuildRequires: maven
@@ -28,8 +28,7 @@ Apache Spark achieves high performance for both batch and streaming data, using 
 %patch0001 -p1
 
 %build
-cp %{SOURCE1} ./settings.xml
-mvn -DskipTests  -Dmaven.test.skip=true clean package -s settings.xml
+mvn -DskipTests -Dmaven.test.skip=true clean package 
 
 
 %install
@@ -41,8 +40,8 @@ cp -rf ../%{name}-%{version} %{buildroot}/opt/apache-%{name}-%{version}
 
 
 %changelog
-* Fri Mar 25 2022 xiexing <xiexing4@hisilicon.com> - 3.2.0-2
-- fix install problem
+* Wed Aug 10 2022 xiexing <xiexing4@hisilicon.com> - 3.2.2-1
+- update spark version
 
 * Tue Mar 15 2022 houyingchao <houyingchao@huawei.com> - 3.2.0-1
 - Upgrade to 3.2.0 version
