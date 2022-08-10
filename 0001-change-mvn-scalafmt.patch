@@ -1,0 +1,12 @@
+diff -Naur spark-3.2.2/pom.xml spark-3.2.2-change/pom.xml
+--- spark-3.2.2/pom.xml	2022-07-11 23:13:02.000000000 +0800
++++ spark-3.2.2-change/pom.xml	2022-07-30 04:40:32.025984410 +0800
+@@ -3199,7 +3199,7 @@
+       <plugin>
+         <groupId>org.antipathy</groupId>
+         <artifactId>mvn-scalafmt_${scala.binary.version}</artifactId>
+-        <version>1.0.4</version>
++        <version>1.0.3</version>
+         <configuration>
+           <parameters>${scalafmt.parameters}</parameters> <!-- (Optional) Additional command line arguments -->
+           <skip>${scalafmt.skip}</skip> <!-- (Optional) skip formatting -->
