@@ -1,5 +1,5 @@
---- spark-3.2.2/pom.xml 2022-07-11 23:13:02.000000000 +0800
-+++ spark-3.2.2-change/pom.xml  2022-11-03 19:54:30.189943736 +0800
+--- spark-3.2.2/pom.xml	2022-07-11 23:13:02.000000000 +0800
++++ spark-3.2.2-change/pom.xml	2022-11-06 09:16:33.050664096 +0800
 @@ -115,7 +115,7 @@
      <java.version>1.8</java.version>
      <maven.compiler.source>${java.version}</maven.compiler.source>
