@@ -4,7 +4,7 @@
 Summary: A unified analytics engine for large-scale data processing.
 Name: spark
 Version: 3.2.2
-Release: 1
+Release: 2
 License: Apache 2.0
 URL: http://spark.apache.org/
 Source0: https://github.com/apache/spark/archive/v%{version}.tar.gz
@@ -39,6 +39,9 @@ cp -rf ../%{name}-%{version} %{buildroot}/opt/apache-%{name}-%{version}
 
 
 %changelog
+* Thu Nov 3 2022 xiexing <xiexing4@hisilicon.com> - 3.2.2-2
+- change maven 3.6.3 to 3.5.4
+
 * Wed Aug 10 2022 xiexing <xiexing4@hisilicon.com> - 3.2.2-1
 - update spark version
 
